@@ -1,11 +1,13 @@
-function Images () { 
+import linkImg from "./assets/link.png"; 
 
-    return( 
-        <> 
+function Images() {
+    return (
         <figure>
-            <img src="./assets/link.png"></img>
-            <figcaption>Imagem</figcaption> 
+            <img 
+                src={linkImg} 
+                alt="Link - The Legend of Zelda" 
+            />
+            <figcaption>Imagem</figcaption>
         </figure>
-        </>
-    )
+    );
 }
