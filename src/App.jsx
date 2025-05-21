@@ -8,6 +8,7 @@ import Card from './components/Card'
 import Children from './components/Children'
 
 function App() {
+  let aluno = "Cami"
 
   return (
     <>
@@ -17,7 +18,7 @@ function App() {
       <EscopoReduz/>
       */}
 
-      <Props nome={"React PIU"}/>
+      <Props nome={"React PIU"} newname={aluno}/>
       <Card/> 
       <br/> 
       <Children> 
