@@ -3,6 +3,7 @@ import './App.css'
 
 import ThemeToggle from "./components/ThemeToggle";
 import Card from './components/Card'
+import Galeria from "./components/Galeria";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,8 +11,7 @@ function App() {
   return (
     <>
 
-      <ThemeToggle/>
-      <Card />
+      <Galeria />
 
     </>
   )
