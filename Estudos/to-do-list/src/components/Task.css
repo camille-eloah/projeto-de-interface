@@ -1,0 +1,45 @@
+.pendente, .concluida {
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .pendente, .dark .concluida {
+    background-color: #2b2b2b;
+    color: #f0f0f0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Classe para alinhar nome + botão */
+.task-line { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.concluida{
+    background-color: green;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* efeito saltado */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.concluida button{
+    background-color: white;
+    color: green;
+}
+
+.dark .concluida{
+    background-color: green;
+    color: white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* efeito saltado */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.dark .concluida button{
+    background-color: white;
+    color: green;
+}
