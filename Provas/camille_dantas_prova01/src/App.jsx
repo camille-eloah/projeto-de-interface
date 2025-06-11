@@ -16,7 +16,7 @@ function App() {
   return (
     <>
 
-      {/* <Lista_Carros carros={carros}/>*/}
+      <Lista_Carros carros={carros}/>
       <Click />
     </> 
 
