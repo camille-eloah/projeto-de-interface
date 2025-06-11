@@ -1,0 +1,14 @@
+.negativo button {
+    background-color: rgb(194, 78, 78);
+    color: white;
+
+}
+
+.positivo button {
+    background-color: rgb(105, 105, 192);
+    color: white;
+}
+
+.normal button {
+    background-color: white;
+}
