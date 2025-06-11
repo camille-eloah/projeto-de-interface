@@ -34,8 +34,9 @@ export default function Theme({children}) /* Declara o componente 'Theme' como f
                 <button className="themeButton" onClick={toggleTheme}>
                     Alternar Tema ({theme === 'light' ? 'Escuro' : 'Claro'})
                 </button>
-                {children}
+                {children} 
             </div>
         </>
-    )
+    ) /* {chilidren} renderiza qualquer componente filho que estiver dentro de <theme>. 
+    Isso faz com que toda a aplicação receba o tema aplicado, já que o div com classe light ou dark envolve tudo. */ 
 }
