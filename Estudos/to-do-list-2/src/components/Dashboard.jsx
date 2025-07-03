@@ -41,14 +41,16 @@ export default function Dashboard () {
                 <button type="submit">Adicionar</button>
             </form>
 
-            {tasks.map((task) => (
-                <Task
-                    key={task.id}
-                    id={task.id}
-                    name={task.title}
-                    onDelete={deleteTask}
-                />
-            ))}
+            <div className="task-list">
+                {tasks.map((task) => (
+                    <Task
+                        key={task.id}
+                        id={task.id}
+                        name={task.title}
+                        onDelete={deleteTask}
+                    />
+                ))}
+            </div>
         </div>
 
     );
