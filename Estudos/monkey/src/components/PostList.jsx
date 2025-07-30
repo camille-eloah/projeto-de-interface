@@ -9,8 +9,8 @@ const PostList = () => {
     // Faz a requisição GET quando o componente monta
     useEffect(() => { 
         fetch('https://jsonplaceholder.typicode.com/posts')
-            .then((res) => res.json())
-            .then((data) => setPosts(data))
+            .then((res) => res.json()) // converte resposta para JSON
+            .then((data) => setPosts(data)) // armazena os dados no estado
             .catch((error) => console.error('Erro ao buscar posts:', error));
     }, []);
 
