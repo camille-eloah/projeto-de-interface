@@ -2,20 +2,14 @@ import React, { useState, useEffect } from 'react';
 
 const TextBackgroundChanger = () => {
   const [text, setText] = useState('');
-  const [bgColor, setBgColor] = useState('#ffffff'); // branco
+  const [bgColor, setBgColor] = useState('#ffffff'); // cor inicial: branco
+
+  const colors = ['#ffffff', '#fff59d', '#90caf9', '#f48fb1']; // lista de cores
 
   useEffect(() => {
-    const length = text.length;
-
-    if (length === 0) {
-      setBgColor('#ffffff'); // branco
-    } else if (length <= 3) {
-      setBgColor('#fff59d'); // amarelo claro
-    } else if (length <= 6) {
-      setBgColor('#90caf9'); // azul claro
-    } else {
-      setBgColor('#f48fb1'); // rosa
-    }
+    // Pega a cor com base no número de letras (mod 4)
+    const index = text.length % colors.length;
+    setBgColor(colors[index]);
   }, [text]);
 
   const handleChange = (e) => {
@@ -51,4 +45,4 @@ const TextBackgroundChanger = () => {
   );
 };
 
-export default TextBackgroundChanger;
+export default TextBackgroundChanger3;
