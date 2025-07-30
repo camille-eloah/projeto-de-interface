@@ -1,19 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-const TextBackgroundChanger = () => {
+const TextBackgroundChanger3 = () => {
   const [text, setText] = useState('');
-  const [bgColor, setBgColor] = useState('#ffffff'); // cor inicial: branco
+  const [bgColor, setBgColor] = useState('#ffffff');
+  const [colorIndex, setColorIndex] = useState(0);
 
-  const colors = ['#ffffff', '#fff59d', '#90caf9', '#f48fb1']; // lista de cores
-
-  useEffect(() => {
-    // Pega a cor com base no número de letras (mod 4)
-    const index = text.length % colors.length;
-    setBgColor(colors[index]);
-  }, [text]);
+  const colors = ['#ffffff', '#fff59d', '#90caf9', '#f48fb1'];
 
   const handleChange = (e) => {
-    setText(e.target.value);
+    const newText = e.target.value;
+
+    // Verifica se o usuário realmente digitou algo novo
+    if (newText.length > text.length) {
+      // Avança para a próxima cor da lista
+      const nextIndex = (colorIndex + 1) % colors.length;
+      setColorIndex(nextIndex);
+      setBgColor(colors[nextIndex]);
+    }
+
+    setText(newText);
   };
 
   return (

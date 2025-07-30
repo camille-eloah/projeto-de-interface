@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const TextBackgroundChanger = () => {
+const TextBackgroundChanger2 = () => {
   const [text, setText] = useState('');
   const [bgColor, setBgColor] = useState('#ffffff'); // branco
 
